@@ -1,0 +1,112 @@
+name: Feature Request
+description: Suggest a new feature or enhancement
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a new feature! Please describe your idea below.
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Feature Category
+      options:
+        - New audit procedure example
+        - New Skills integration (PDF, etc.)
+        - XBRL enhancement
+        - Data validation improvement
+        - Documentation
+        - Testing/Quality
+        - Phase 4 - Cross-reference engine
+        - Phase 5 - Integrated prototype
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: audience
+    attributes:
+      label: Primary Audience
+      description: Who would benefit most from this feature?
+      options:
+        - Educators/Professors
+        - Students
+        - Audit Practitioners
+        - Regulators
+        - Developers
+        - All audiences
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement
+      description: What problem does this feature solve? What use case does it address?
+      placeholder: "As an accounting professor, I need..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: Describe your proposed solution or feature
+      placeholder: "Add a new example that shows..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Have you considered any alternative solutions or workarounds?
+      placeholder: "I tried..., but it didn't work because..."
+
+  - type: textarea
+    id: examples
+    attributes:
+      label: Examples / Use Cases
+      description: Provide specific examples of how this feature would be used
+      placeholder: |
+        Example 1: A professor could use this to teach...
+        Example 2: An auditor could use this to...
+
+  - type: dropdown
+    id: standards
+    attributes:
+      label: Audit Standards Relevance
+      description: Does this relate to specific audit standards?
+      options:
+        - PCAOB Standards
+        - AICPA Standards
+        - IAASB Standards
+        - Multiple standards
+        - Not standards-specific
+        - N/A
+
+  - type: textarea
+    id: standards-detail
+    attributes:
+      label: Standards Details
+      description: If applicable, which specific standards? (e.g., AS 2201, ISA 240)
+      placeholder: "AS 2201 - Auditor's Responses to Risks of Material Misstatement"
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Contribution Interest
+      options:
+        - label: I would be willing to contribute this feature
+        - label: I can provide test cases or examples
+        - label: I can help with documentation
+        - label: I need help implementing this
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Add any other context, screenshots, or references
+      placeholder: "Links to relevant documentation, similar tools, etc."

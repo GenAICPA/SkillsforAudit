@@ -1,0 +1,100 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# API Keys and Secrets
+.env
+.env.local
+*.key
+*credentials*
+*secrets*
+
+# Generated audit files (DO NOT COMMIT CLIENT DATA)
+*.pptx
+*.xlsx
+*.pdf
+*.docx
+
+# Generated sample data files
+sample_audit_checklist.json
+audit_checklist_schema.json
+sample_ixbrl_financials.html
+xbrl_audit_analysis.xlsx
+audit_program_*.xlsx
+*_presentation.pptx
+*_workpaper.xlsx
+bank_reconciliation_workpaper.xlsx
+audit_sampling_workpaper.xlsx
+renewable_energy_presentation.pptx
+
+# XBRL files (except in sample_data/)
+*.xbrl
+*.xml
+!sample_data/**/*.xbrl
+!sample_data/**/*.xml
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Exception: Keep example outputs in docs/
+!docs/examples/*.pptx
+!docs/examples/*.xlsx
+!docs/examples/*.pdf

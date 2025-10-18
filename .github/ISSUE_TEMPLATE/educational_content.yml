@@ -1,0 +1,134 @@
+name: Educational Content / Teaching Materials
+description: Share teaching materials or request educational enhancements
+title: "[Education]: "
+labels: ["education", "documentation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Share your teaching experience or suggest educational improvements!
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Submission Type
+      options:
+        - Sharing classroom materials
+        - Requesting new teaching materials
+        - Suggesting curriculum improvements
+        - Reporting teaching challenges
+        - Student project showcase
+    validations:
+      required: true
+
+  - type: dropdown
+    id: level
+    attributes:
+      label: Academic Level
+      description: What level is this content appropriate for?
+      options:
+        - Undergraduate
+        - Graduate (Master's)
+        - Graduate (PhD)
+        - Professional certification (CPA, etc.)
+        - Continuing Professional Education
+        - Multiple levels
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Describe the materials or your request
+      placeholder: |
+        I've created a classroom assignment using Phase 2 examples...
+        OR
+        I would like materials that teach...
+    validations:
+      required: true
+
+  - type: textarea
+    id: learning-objectives
+    attributes:
+      label: Learning Objectives
+      description: What should students learn from this material?
+      placeholder: |
+        - Understand how AI can assist with audit documentation
+        - Practice creating audit programs in JSON format
+        - Learn XBRL validation techniques
+
+  - type: input
+    id: duration
+    attributes:
+      label: Time Commitment
+      description: How long does this take? (e.g., "1 week assignment", "2-hour lab")
+      placeholder: "2-hour lab session"
+
+  - type: textarea
+    id: prerequisites
+    attributes:
+      label: Prerequisites
+      description: What should students know before using this material?
+      placeholder: |
+        - Basic Python programming
+        - Introductory auditing course
+        - Understanding of financial statements
+
+  - type: textarea
+    id: assessment
+    attributes:
+      label: Assessment / Evaluation
+      description: How would you assess student learning with this material?
+      placeholder: |
+        Students submit:
+        - Completed audit checklist JSON
+        - Generated Excel workpaper
+        - Reflection on AI's role in audit
+
+  - type: textarea
+    id: materials
+    attributes:
+      label: Materials / Links
+      description: Links to syllabi, assignments, rubrics, etc. (anonymized)
+      placeholder: |
+        Link to Google Doc, GitHub gist, etc.
+
+  - type: dropdown
+    id: tested
+    attributes:
+      label: Classroom Testing Status
+      description: Have you used this in a classroom?
+      options:
+        - Tested in classroom (sharing results)
+        - Planning to use (requesting feedback)
+        - Concept only (not yet tested)
+        - N/A
+    validations:
+      required: true
+
+  - type: textarea
+    id: results
+    attributes:
+      label: Classroom Results / Feedback
+      description: If tested, what were the results? Student feedback?
+      placeholder: |
+        Students found Phase 2 examples engaging. 90% successfully completed the assignment.
+        Challenge: Some students struggled with...
+
+  - type: checkboxes
+    id: permissions
+    attributes:
+      label: Permissions & Sharing
+      options:
+        - label: I grant permission to include these materials in the repository
+        - label: Materials are anonymized (no real student names/data)
+        - label: I have rights to share any third-party content included
+        - label: I'm willing to be credited as a contributor
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Any other information that would be helpful
+      placeholder: "This worked well alongside traditional textbook chapters on..."

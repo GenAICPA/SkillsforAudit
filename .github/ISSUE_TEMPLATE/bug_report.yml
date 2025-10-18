@@ -1,0 +1,129 @@
+name: Bug Report
+description: Report a bug or unexpected behavior
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! Please fill out the form below.
+
+  - type: dropdown
+    id: phase
+    attributes:
+      label: Which phase does this affect?
+      options:
+        - Phase 1 - Foundations
+        - Phase 2 - Structured Data
+        - Phase 3 - XBRL
+        - Phase 4 - Cross-Reference
+        - Phase 5 - Prototype
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: file
+    attributes:
+      label: Affected file(s)
+      description: Which file(s) are affected? (e.g., 01_basic_pptx.py)
+      placeholder: "example: 06_checklist_to_excel.py"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: A clear description of what the bug is
+      placeholder: "When I run the script, it fails with..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: Steps to reproduce the behavior
+      placeholder: |
+        1. Run command '...'
+        2. See error '...'
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+      placeholder: "The script should generate an Excel file..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What actually happened?
+      placeholder: "Instead, I got an error message..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Error Messages / Logs
+      description: Please paste any error messages or relevant logs
+      render: shell
+      placeholder: |
+        Paste error messages here
+
+  - type: input
+    id: python-version
+    attributes:
+      label: Python Version
+      description: What version of Python are you using?
+      placeholder: "3.13.7"
+    validations:
+      required: true
+
+  - type: input
+    id: anthropic-version
+    attributes:
+      label: Anthropic SDK Version
+      description: What version of the Anthropic package? (run `pip show anthropic`)
+      placeholder: "0.x.x"
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating System
+      options:
+        - Windows
+        - macOS
+        - Linux
+        - Other
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Pre-submission Checklist
+      options:
+        - label: I have searched existing issues to ensure this isn't a duplicate
+          required: true
+        - label: I am using the latest version from the main branch
+          required: true
+        - label: I have removed any sensitive data (API keys, client info) from my report
+          required: true
+        - label: I have included all relevant error messages and logs
+          required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Add any other context about the problem here
+      placeholder: "This might be related to..."
