@@ -25,6 +25,26 @@ Build progressive understanding of Claude Skills by creating an end-to-end audit
 - Cross-references audit procedures with XBRL data points
 - Demonstrates AI-assisted audit workflows for educational and regulatory audiences
 
+### Architecture Overview
+
+```mermaid
+graph TD
+    A[Inline XBRL Financial Statement] --> B[Phase 3: Parse & Validate]
+    C[Audit Checklist JSON] --> D[Phase 2: Structure & Validate]
+    B --> E[Phase 4: Cross-Reference Engine]
+    D --> E
+    E --> F[Coverage Analysis]
+    F --> G[Phase 1: Generate Reports]
+    G --> H[Excel Workpapers]
+    G --> I[PowerPoint Presentations]
+    G --> J[PDF Audit Reports]
+
+    style A fill:#e1f5ff
+    style C fill:#e1f5ff
+    style E fill:#fff4e1
+    style G fill:#e8f5e9
+```
+
 ## Repository Structure
 
 ```

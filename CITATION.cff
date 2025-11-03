@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this software in your research or teaching, please cite it as below."
+type: software
+title: "Skills for Audit: AI-Assisted Financial Audit Workflows"
+abstract: "A comprehensive learning path for applying Anthropic's Claude Skills to financial audit workflows, designed for accounting professors, audit regulators, and practitioners."
+authors:
+  - name: "GenAICPA"
+repository-code: "https://github.com/GenAICPA/SkillsforAudit"
+url: "https://github.com/GenAICPA/SkillsforAudit"
+keywords:
+  - artificial intelligence
+  - audit
+  - accounting
+  - XBRL
+  - education
+  - Claude
+  - financial reporting
+  - PCAOB
+license: MIT
+version: 1.0.0
+date-released: 2025-01-18
